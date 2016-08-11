@@ -9,16 +9,16 @@ class PageController extends Controller
 {
     public function index()
     {
-        var_dump($this->container);
+        echo 'index method';
     }
 
-    public function all(Request $request)
+    public function getById($id)
     {
-        $tasks = Task::all();
-        foreach ($tasks as $task) {
-            echo $task->name;
-        }
+        echo 'Id from route: ' . $id;
+    }
 
-        var_dump($request);
+    public function writeResponse()
+    {
+        return $this->response->write('This is an http response');
     }
 }

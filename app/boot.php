@@ -13,3 +13,7 @@ $capsule->addConnection($container['settings']['db']);
 
 $capsule->setAsGlobal();
 $capsule->bootEloquent();
+
+$container['foundHandler'] = function() {
+    return new \Core\InvocationStrategy();
+};
