@@ -1,7 +1,9 @@
 <?php
 
-$app->get('/', '\App\Controllers\PageController:index');
+$app->get('/signup', 'App\Controllers\AuthController:getSignup');
+$app->post('/signup', 'App\Controllers\AuthController:postSignup');
 
-$app->get('/page/{id}', '\App\Controllers\PageController:getById');
+$app->get('/login', 'App\Controllers\AuthController:getLogin');
+$app->post('/login', 'App\Controllers\AuthController:postLogin');
 
-$app->get('/response', '\App\Controllers\PageController:writeResponse');
+$app->get('/home', 'App\Controllers\AuthController:show');

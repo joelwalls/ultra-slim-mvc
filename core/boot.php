@@ -1,7 +1,11 @@
 <?php
 
+session_start();
+
 use Slim\App;
 use Illuminate\Database\Capsule\Manager as Capsule;
+
+define('INC_ROOT', dirname(__DIR__));
 
 $app = new App(['settings' => $config]);
 
