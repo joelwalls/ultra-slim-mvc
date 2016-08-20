@@ -13,3 +13,5 @@ $config['db'] = [
     'collation' => 'utf8_unicode_ci',
     'prefix'    => '',
 ];
+
+$config['templatePath'] = INC_ROOT . '/app/views/';

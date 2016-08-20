@@ -7,11 +7,19 @@ use Psr\Http\Message\ResponseInterface;
 use Slim\Interfaces\InvocationStrategyInterface;
 
 /**
-* 
-*/
+ * Custom InvocationStrategy
+ */
 class InvocationStrategy implements InvocationStrategyInterface
 {
     
+    /**
+     * Invoke a route callable
+     * @param  callable               $callable The callable to invoke using the strategy.
+     * @param  ServerRequestInterface $request  The request object.
+     * @param  ResponseInterface      $response The response object.
+     * @param  array                  $args     The reoute's placeholders arguments.
+     * @return ResponseInterface|string         The reponse from the callable
+     */
     function __invoke(
         callable $callable, 
         ServerRequestInterface $request, 
