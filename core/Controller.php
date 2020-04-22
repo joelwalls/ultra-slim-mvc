@@ -2,7 +2,7 @@
 
 namespace Core;
 
-use Interop\Container\ContainerInterface;
+use Slim\Container;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Message\ResponseInterface;
 
@@ -39,9 +39,9 @@ class Controller
     
     /**
      * Creates a new Controller Object and asigns the Container
-     * @param ContainerInterface $ci 
+     * @param Container $ci 
      */
-    public function __construct(ContainerInterface $ci)
+    public function __construct(Container $ci)
     {
         $this->container = $ci;
         $this->templatePath = $this->container['settings']['templatePath'];
