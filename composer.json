@@ -4,7 +4,7 @@
     "homepage": "https://github.com/joelwalls/ultra-slim-mvc",
     "require": {
         "slim/slim": "^3.0",
-        "illuminate/database": "^5.2"
+        "illuminate/database": "^6.20"
     },
     "autoload": {
         "psr-4": {
